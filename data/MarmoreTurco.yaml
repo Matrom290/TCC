@@ -1,0 +1,35 @@
+path: /content/drive/MyDrive/uvv/yolov9/MarmoresTurcos2  # dataset root dir
+train: Treino  # train images (relative to 'path') 2.942 images
+val: Validacao  # val images (relative to 'path') 370 images
+test: Teste  # 370 images, submit to https://competitions.codalab.org/competitions/20794
+
+# Classes
+names:
+  0: AageanRose
+  1: AfyonBal
+  2: AfyonBeyaz
+  3: AfyonBlack
+  4: AfyonGrey1
+  5: AfyonSeker
+  6: bejmermer
+  7: Blue1
+  8: Capuchino
+  9: diyabaz
+  10: DolceVita
+  11: EkvatorPijama
+  12: ElazigVisne
+  13: GoldGalaxy
+  14: GulKurusu
+  15: kaplanpostu
+  16: karacabeysiyah
+  17: kemalpasabeyaz
+  18: konglomera
+  19: KristalEmprador
+  20: leylakmermer
+  21: limbra
+  22: MediBlack
+  23: MilasSedef
+  24: OliviaMarble
+  25: oniks
+  26: RainGrey
+  27: traverten

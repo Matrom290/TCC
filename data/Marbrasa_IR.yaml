@@ -1,0 +1,19 @@
+path: /content/drive/MyDrive/uvv/yolov9/Marbrasa_IR  # dataset root dir
+train: Treino  # train images (relative to 'path') 118287 images
+val: Validacao  # val images (relative to 'path') 5000 images
+test: Teste  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+nc: 12
+# Classes
+names:
+  0: Amarelo_Giallo_Fiorito
+  1: Amarelo_Ornamental
+  2: Black_Marbrasa
+  3: Branco_Dallas
+  4: Branco_Desiree
+  5: Branco_Ipanema
+  6: Cinza_Corumba
+  7: Preto_Blue_Night
+  8: Preto_Makalu
+  9: Preto_Sao_Gabriel
+  10: Verde_Butterfly
+  11: Verde_Labrador
