@@ -1,0 +1,33 @@
+# YOLOv9 (modificado para Classificação)
+
+# parâmetros
+nc: 28  # número de classes (ajuste conforme seu dataset)
+depth_multiple: 1.0
+width_multiple: 1.0
+
+# anchors (não necessários para classificação)
+anchors: 3
+
+# YOLOv9 backbone (mantemos para extração de features)
+backbone:
+  [
+   [-1, 1, Silence, []],  
+   [-1, 1, Conv, [64, 3, 2]],  
+   [-1, 1, Conv, [128, 3, 2]],  
+   [-1, 1, RepNCSPELAN4, [256, 128, 64, 1]],  
+   [-1, 1, ADown, [256]],  
+   [-1, 1, RepNCSPELAN4, [512, 256, 128, 1]],  
+   [-1, 1, ADown, [512]],  
+   [-1, 1, RepNCSPELAN4, [512, 512, 256, 1]],  
+   [-1, 1, ADown, [512]],  
+   [-1, 1, RepNCSPELAN4, [512, 512, 256, 1]],  
+  ]
+
+# Cabeçalho modificado para Classificação
+head:
+  [
+   [-1, 1, SPPELAN, [512, 256]],  
+   [-1, 1, nn.AdaptiveAvgPool2d, [1]],  # Redução espacial para vetor de características
+   [-1, 1, nn.Flatten, []],  # Flatten para entrada em camada totalmente conectada
+   [-1, 1, nn.Linear, [512, nc]],  # Camada de saída para classificação
+  ]
